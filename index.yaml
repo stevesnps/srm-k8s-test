@@ -1,0 +1,1174 @@
+apiVersion: v1
+entries:
+  mariadb:
+  - apiVersion: v1
+    appVersion: 10.3.25
+    created: "2024-09-21T00:12:48.494628518Z"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system. MariaDB Server is intended for mission-critical, heavy-load
+      production systems as well as for embedding into mass-deployed software. Highly
+      available MariaDB cluster.
+    digest: de4519fcac49d1baba138e689c34dac9d0f3844a2426685f9f214e5a5f494f85
+    home: https://mariadb.org
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mariadb
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/mariadb-7.6.0.tgz
+    version: 7.6.0
+  - apiVersion: v1
+    appVersion: 10.3.25
+    created: "2024-09-21T00:12:48.492662099Z"
+    description: Fast, reliable, scalable, and easy to use open-source relational
+      database system. MariaDB Server is intended for mission-critical, heavy-load
+      production systems as well as for embedding into mass-deployed software. Highly
+      available MariaDB cluster.
+    digest: f618fac461e79b0761ee0f70b6efc2342bf78fad53305e45eb612a99864248bf
+    home: https://mariadb.org
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/bitnami-docker-mariadb
+    - https://github.com/prometheus/mysqld_exporter
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/mariadb-7.5.0.tgz
+    version: 7.5.0
+  minio:
+  - apiVersion: v1
+    appVersion: 2020.3.25
+    created: "2024-09-21T00:12:48.496162204Z"
+    description: MinIO is an object storage server, compatible with Amazon S3 cloud
+      storage service, mainly used for storing unstructured data (such as photos,
+      videos, log files, etc.)
+    digest: a929c8c59d714a2e9d2e84c36c726a11b18029056108394ef198c37cba7c68c8
+    home: https://min.io
+    icon: https://codedx.com/wp-content/uploads/2017/03/CodeDx-logo.png
+    keywords:
+    - minio
+    - storage
+    - object-storage
+    - s3
+    - cluster
+    maintainers:
+    - email: support@codedx.com
+      name: CodeDx
+    name: minio
+    sources:
+    - https://github.com/codedx/charts
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/minio-3.3.0.tgz
+    version: 3.3.0
+  srm:
+  - apiVersion: v2
+    appVersion: v2024.9.2
+    created: "2024-09-21T00:12:48.957932893Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: b1f6a957c6e14f5eca3224cea1a4b3edba819ddf1812e64a313cf991e9803ec8
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.34.0.tgz
+    version: 1.34.0
+  - apiVersion: v2
+    appVersion: v2024.9.2
+    created: "2024-09-21T00:12:48.945631931Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: 330b9233aba2d6270aa219dc6afb41dcee909395bd396fdab05c4acc53c8ddf8
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.33.0.tgz
+    version: 1.33.0
+  - apiVersion: v2
+    appVersion: v2024.9.2
+    created: "2024-09-21T00:12:48.932655252Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: b4df2192b503579c8d3f4423df8889fcbcb3f58c854bc3b843d2d1c9cb171aa7
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.32.0.tgz
+    version: 1.32.0
+  - apiVersion: v2
+    appVersion: v2024.9.0
+    created: "2024-09-21T00:12:48.918714571Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: 8f746bbf5e2484facb36f310724b51c602d14aa43e2b7931921a1c543e42e8e2
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.31.0.tgz
+    version: 1.31.0
+  - apiVersion: v2
+    appVersion: v2024.6.4
+    created: "2024-09-21T00:12:48.904740182Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: 625500a6824c0c5578a366586fa14f6f4f1cd21c93339c8960f4858dc2fc1e68
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.30.0.tgz
+    version: 1.30.0
+  - apiVersion: v2
+    appVersion: v2024.6.3
+    created: "2024-09-21T00:12:48.879361313Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: c4f80d0a1dd7f9dafbb04a1a649e3e27cc63bc58dbb6fa55ec605a347afa2ffe
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.29.1.tgz
+    version: 1.29.1
+  - apiVersion: v2
+    appVersion: v2024.6.3
+    created: "2024-09-21T00:12:48.868109729Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.6.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: 886b6f05ed8d3c95e7a91b78e3ebe268b3f9755b7c68d59048287ba880d18395
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.29.0.tgz
+    version: 1.29.0
+  - apiVersion: v2
+    appVersion: v2024.6.2
+    created: "2024-09-21T00:12:48.853785921Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 7.5.0
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://synopsys-sig.github.io/srm-k8s
+      version: 3.3.0
+    description: Software Risk Manager
+    digest: bc39027d8a12c5aa5b0a68f8087a6896fee8770946efe187183362997c513032
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.28.0.tgz
+    version: 1.28.0
+  - apiVersion: v2
+    appVersion: 2024.6.1
+    created: "2024-09-21T00:12:48.839558286Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: b9be24fe24c534346629203851c75d858bf92a1c17107441efcd04b828680eae
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.27.0.tgz
+    version: 1.27.0
+  - apiVersion: v2
+    appVersion: 2024.6.0
+    created: "2024-09-21T00:12:48.825959029Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo-workflows
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.41.4
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: d387cf34fc571629f0bd2bd7d9b1d42d839471288ae46b46304c37c660237756
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.26.0.tgz
+    version: 1.26.0
+  - apiVersion: v2
+    appVersion: 2024.3.5
+    created: "2024-09-21T00:12:48.812681493Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 2247698efb3ffb65acb31fe536ed21d3e4070c16e8e1ca423e448a07f01875bf
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.25.0.tgz
+    version: 1.25.0
+  - apiVersion: v2
+    appVersion: 2024.3.4
+    created: "2024-09-21T00:12:48.799516959Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 575e7db562bc0720dedb3168ad8a8f863510ddac50bfd23bdcb99b64443842d9
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.24.0.tgz
+    version: 1.24.0
+  - apiVersion: v2
+    appVersion: 2024.3.3
+    created: "2024-09-21T00:12:48.788226339Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: dc001e0caa6cf77cd1be89b71e1ff0617fff1c41452b31d42a75fed5d8f7e081
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.23.0.tgz
+    version: 1.23.0
+  - apiVersion: v2
+    appVersion: 2024.3.2
+    created: "2024-09-21T00:12:48.77535988Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: e81a44c4810bfa67014bdfd2f5a06c6e47977a88e4fe71b66625546801b6b0af
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.22.2.tgz
+    version: 1.22.2
+  - apiVersion: v2
+    appVersion: 2024.3.2
+    created: "2024-09-21T00:12:48.761427531Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: b2badf53d3f36fc10ac2e6a48d1f34eee10eaa72a9ce684cd7e60574f413a07e
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.22.1.tgz
+    version: 1.22.1
+  - apiVersion: v2
+    appVersion: 2024.3.2
+    created: "2024-09-21T00:12:48.747888275Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2024.3.0
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 3a493750c674d60558b5526f7a6c5aae54173fda4048671f6c30106567e0c189
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.22.0.tgz
+    version: 1.22.0
+  - apiVersion: v2
+    appVersion: 2024.3.2
+    created: "2024-09-21T00:12:48.734976646Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: b2ce7feb34071dd2fdf4f8590426af863193900eeffa73c9ba39bb83a5d7b82a
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.21.1.tgz
+    version: 1.21.1
+  - apiVersion: v2
+    appVersion: 2024.3.2
+    created: "2024-09-21T00:12:48.722741831Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 7a48f365a901a0a2015c3d1c5c3422eb7aec593066bd4f37911f5f01ee43f7a6
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.20.1.tgz
+    version: 1.20.1
+  - apiVersion: v2
+    appVersion: 2024.3.1
+    created: "2024-09-21T00:12:48.710388226Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: fe4f6ef886e7ed5c7d6efc9e71e49cbc14b8fb1672de15e388c88d36fb8f3d75
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.20.0.tgz
+    version: 1.20.0
+  - apiVersion: v2
+    appVersion: 2024.3.0
+    created: "2024-09-21T00:12:48.687510478Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 1783a6b2bd214d04bc6c72ba91caa39fc9e7b306e6ab9f9a3eff5e5f7a0f285b
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.19.1.tgz
+    version: 1.19.1
+  - apiVersion: v2
+    appVersion: 2024.3.0
+    created: "2024-09-21T00:12:48.674914398Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: f6e1d2c45fc3e89cd004d34615b242d805b9fdec92a6cd1ca0fd1cfaff6ea5e0
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.19.0.tgz
+    version: 1.19.0
+  - apiVersion: v2
+    appVersion: 2023.12.6
+    created: "2024-09-21T00:12:48.662357924Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 1cd0442f81e286143aae9387c11786581ac5f9e736f6659c3f91b93e92f86fda
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.18.1.tgz
+    version: 1.18.1
+  - apiVersion: v2
+    appVersion: 2023.12.6
+    created: "2024-09-21T00:12:48.650899772Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: f8cb86f7382b9763b46533820abbdcf16348828fea4f7c349dab683b66eac3c0
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.18.0.tgz
+    version: 1.18.0
+  - apiVersion: v2
+    appVersion: 2023.12.4
+    created: "2024-09-21T00:12:48.626361073Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 0e3a459b6285db9cb89521d2660322f3599740d20a88ac3df0b0f111da02bceb
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.16.0.tgz
+    version: 1.16.0
+  - apiVersion: v2
+    appVersion: 2023.12.3
+    created: "2024-09-21T00:12:48.607234779Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: d2a567c078a8e3581d4021e69562051758f844067e876ebaffef58a29e360b82
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.15.0.tgz
+    version: 1.15.0
+  - apiVersion: v2
+    appVersion: 2023.12.2
+    created: "2024-09-21T00:12:48.585301297Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: e1d69d34bd827cdd12030bc9950bda093d98b00afa5ea75f5a8ddb3e79624529
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.14.0.tgz
+    version: 1.14.0
+  - apiVersion: v2
+    appVersion: 2023.12.2
+    created: "2024-09-21T00:12:48.56833417Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 9f28420df3ba44a894f9f35136cc8e3551a6444a055d3874b5b2e8d945d3ba78
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.13.0.tgz
+    version: 1.13.0
+  - apiVersion: v2
+    appVersion: 2023.12.1
+    created: "2024-09-21T00:12:48.549690474Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: e4de455c19525e3984d8e11eb37b7df7d7ff9f7387faf95aee105f3ebaeaa1e1
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.12.1.tgz
+    version: 1.12.1
+  - apiVersion: v2
+    appVersion: 2023.12.1
+    created: "2024-09-21T00:12:48.534954732Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: bb25ab4c807aba0a8cfa7bdca4452061bdb5c954692fda69ae84408a28a11bac
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.12.0.tgz
+    version: 1.12.0
+  - apiVersion: v2
+    appVersion: 2023.12.0
+    created: "2024-09-21T00:12:48.522504994Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.9.2
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 08b37f1c9e2d89b6ed15abfdb9ff7306690f6d3d524a6f75ca777a1c2ba85fdf
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.11.0.tgz
+    version: 1.11.0
+  - apiVersion: v2
+    appVersion: 2023.8.8
+    created: "2024-09-21T00:12:48.50903718Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: cbdd5e70af1fc3779b34454329b7afdac4880331b4318e4ffbb316db9ad134bd
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.10.0.tgz
+    version: 1.10.0
+  - apiVersion: v2
+    appVersion: 2023.8.7
+    created: "2024-09-21T00:12:49.034691941Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: d19ebf72b40e7f94b57db65d823cb327b0b6fcd70a3b863726fd4e097f22ba8b
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v2
+    appVersion: 2023.8.7
+    created: "2024-09-21T00:12:49.021914443Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 12af2d3c54f5e0f33284baa8bd86c6e648456248b5df88871b5954c81fab56bb
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.8.0.tgz
+    version: 1.8.0
+  - apiVersion: v2
+    appVersion: 2023.8.6
+    created: "2024-09-21T00:12:49.010876767Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: c28fe4eb3b84390378cca6d7455ce37d706734f9ef25314ea2f4e30225b1e6f7
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.7.0.tgz
+    version: 1.7.0
+  - apiVersion: v2
+    appVersion: 2023.8.6
+    created: "2024-09-21T00:12:48.997540754Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: c0dc46157f86232e9105e2a6fbd5385300950d6fa0ebf06fe84c70a85e0dc8d3
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
+    appVersion: 2023.8.5
+    created: "2024-09-21T00:12:48.984379498Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 1fe3188dfdf48b489692575edac68199f242c8fb00b34ddf8f48ad7c1ce0c192
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v2
+    appVersion: 2023.8.4
+    created: "2024-09-21T00:12:48.971887252Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: e4e2d77d73ebfdf058aa6d5d1432a09640288bd647471fc8b64a6d8859862d8b
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v2
+    appVersion: 2023.8.3
+    created: "2024-09-21T00:12:48.891475345Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: 3d86a353e5de557066fa1fe3417bc7028e257679bd06bb55b2436a2fdb1f4d25
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
+    appVersion: 2023.8.1
+    created: "2024-09-21T00:12:48.700119188Z"
+    dependencies:
+    - condition: features.mariadb
+      name: mariadb
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 7.4.4
+    - condition: features.scanfarm
+      name: cnc
+      repository: https://sig-repo.synopsys.com/artifactory/sig-cloudnative
+      version: 2023.6.1
+    - condition: features.to
+      name: argo
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 0.14.5
+    - condition: features.minio
+      name: minio
+      repository: https://codedx.github.io/codedx-kubernetes
+      version: 3.2.1
+    description: Software Risk Manager
+    digest: dc21d3dbfb8fe0d56c28d10f9be9c03514d1ec6628dcb6c6042a4274ec280775
+    icon: https://synopsys.com/content/dam/synopsys/sig-assets/images/icons/synopsys-codedx.svg
+    name: srm
+    type: application
+    urls:
+    - https://synopsys-sig.github.io/srm-k8s/srm-1.2.0.tgz
+    version: 1.2.0
+generated: "2024-09-21T00:12:48.490102902Z"
